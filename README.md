@@ -1,3 +1,5 @@
+# China Bridge Mobile App
+
 This is the China Bridge Mobile App project for the China Bridge conferences held in Toronto. This is a cross-platform app. The InVision designs for the app can be found [here](https://invis.io/DBMQ7M9KWMV).
 
 <!--
@@ -31,7 +33,7 @@ The most recent version of this guide is available [here](https://github.com/rea
 
 ## Commands
 
-### `npm start`
+### `yarn start`
 
 Runs the app in development mode.
 
@@ -40,22 +42,20 @@ Open it in the [Expo app](https://expo.io) on your phone to view it. It will rel
 Sometimes you may need to reset or clear the React Native packager's cache. To do so, you can pass the `--reset-cache` flag to the start script:
 
 ```
-npm start --reset-cache
-# or
 yarn start --reset-cache
 ```
 
-#### `npm test`
+#### `yarn test`
 
 Runs the [jest](https://github.com/facebook/jest) test runner on your tests.
 
-#### `npm run ios`
+#### `yarn run ios`
 
-Like `npm start`, but also attempts to open the app in the iOS Simulator if you're on a Mac and have it installed.
+Like `yarn start`, but also attempts to open the app in the iOS Simulator if you're on a Mac and have it installed.
 
-#### `npm run android`
+#### `yarn run android`
 
-Like `npm start`, but also attempts to open the app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup).
+Like `yarn start`, but also attempts to open the app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup).
 
 <!--
 We also recommend installing Genymotion as your Android emulator. Once you've finished setting up the native build environment, there are two options for making the right copy of `adb` available to Create React Native App:
