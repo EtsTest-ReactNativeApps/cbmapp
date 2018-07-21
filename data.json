@@ -1,0 +1,48 @@
+{
+	"language": "english",
+	"fileMap": 
+	{
+		"series 1 id": {
+			"seriesName": "The Church of God",
+			"speakers": ["Paul Washer"],
+			"interpreters": ["Larry Pan"],
+			"seriesDate": "201804",
+			"description": "some long paragraph",
+			"files": [
+				{
+					"id": "001",
+					"title": "some title",
+					"speakers": ["Paul Washer"],
+					"interpreters": ["Larry Pan"],
+					"timestamp": "2018-05-19T11:59:06.511Z", // use standard timestamp 
+					"filename": {
+						"serverA": "001.mp3",
+						"serverB": "012724jsru97232.mp3"
+					}
+				}
+			]
+		},
+		
+		
+	},
+	"servers": [
+		{
+			"serverA": {
+				"url": "http://www.blah.com",
+				"path": "/somewhere/"
+			},
+			"serverB": {
+
+			},
+			
+		}
+	],
+	"events": [
+		{
+			"series": "series x",
+			"startDate": "20180622",
+			"endDate": "20180624",
+			"speakers": ["John"],
+			"interpreters": ["Larry Pan"],
+		}]
+}

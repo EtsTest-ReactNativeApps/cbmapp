@@ -1,28 +1,51 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Text, View } from 'react-native'
+'use strict';
 
-const StyledView = styled(View)`
-    align-items: center;
-    background-color: #245d8c;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    justify-content: center;
-    width: 100%;
-`
+import React, { Component } from 'react';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  StatusBar
+} from 'react-native';
+import {
+  StackNavigator,
+} from 'react-navigation';
 
-const StyledText = styled(Text)`
-    color: #ffffff;
-    font-size: 18px;
-`
+import Splash_Screen from './Splash_Screen';
+import MainPage from './MainPage';
+import MenuPage from './MenuPage';
+import AboutPage from './About';
+import AnnouncementPage from './Announcements';
+import ContactUs from './ContactPage';
+import SpeakerMain from './SpeakerMain';
+import SpeakerJH from './SpeakerJH';
+import SpeakerMD from './SpeakerMD';
+import SpeakerJT from './SpeakerJT';
+import SpeakerPW from './SpeakerPW';
+import SpeakerLP from './SpeakerLP';
+import SeriesMenu from './SeriesMain';
+import Series_1 from './Series1';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <StyledView>
-        <StyledText>Welcome to the China Bridge App!</StyledText>
-      </StyledView>
-    )
-  }
-}
+
+const App = StackNavigator(
+    {
+        InitScreen: { screen: Splash_Screen },
+        Home: { screen: MainPage },
+        Menu: { screen: MenuPage },
+        About: { screen: AboutPage },
+        Announcements: { screen: AnnouncementPage },
+        Contact: { screen: ContactUs },
+        Speakers: { screen: SpeakerMain },
+        Speaker1: { screen: SpeakerJH },
+        Speaker2: { screen: SpeakerMD },
+        Speaker3: { screen: SpeakerJT },
+        Speaker4: { screen: SpeakerPW },
+        Speaker5: { screen: SpeakerLP },
+        SeriesHome: { screen: SeriesMain },
+        Series1: { screen: Series_1 },
+    }, {
+        initialRouteName: "Menu" 
+    }
+);
+export default App;

@@ -1,0 +1,79 @@
+{
+	"The Christian Family": {
+		"speaker": ["Paul Washer"],
+		"translator": ["Larry Pan"],
+		"time": "March 16-18, 2012",
+		"no_of_sermons": 8,
+		"sermons": {
+			"God's Purpose for Creating Man": {
+				"index": 1,
+				"series": "The Christian Family",
+				"date": "March 16, 2012",
+				"speaker": ["Paul Washer"],
+				"translator": ["Larry Pan"],
+			},
+			"Looking to Ancient Roads": {
+				"index": 2,
+				"series": "The Christian Family",
+				"date": "March 16, 2012",
+				"speaker": ["Paul Washer"],
+				"translator": ["Larry Pan"],
+			},
+			"The Narrow Gate": {
+				"index": 3,
+				"series": "The Christian Family",
+				"date": "March 16, 2012",
+				"speaker": ["Paul Washer"],
+				"translator": ["Larry Pan"],
+			},
+			"Walking the Narrow Path": {
+				"index": 4,
+				"series": "The Christian Family",
+				"date": "March 16, 2012",
+				"speaker": ["Paul Washer"],
+				"translator": ["Larry Pan"],
+			},
+			"According to Their Fruit": {
+				"index": 5,
+				"series": "The Christian Family",
+				"date": "March 16, 2012",
+				"speaker": ["Paul Washer"],
+				"translator": ["Larry Pan"],
+			},
+			"The Way of the Husband and Wife": {
+				"index": 6,
+				"series": "The Christian Family",
+				"date": "March 16, 2012",
+				"speaker": ["Paul Washer"],
+				"translator": ["Larry Pan"],
+			},
+			"The Way of the Husband and Wife (2)": {
+				"index": 7,
+				"series": "The Christian Family",
+				"date": "March 16, 2012",
+				"speaker": ["Paul Washer"],
+				"translator": ["Larry Pan"],
+			},			
+			"Effective Child Discipline": {
+				"index": 8,
+				"series": "The Christian Family",
+				"date": "March 16, 2012",
+				"speaker": ["Paul Washer"],
+				"translator": ["Larry Pan"],
+			},	
+		}
+	},
+
+	"In the Beginning": {
+		"speaker": ["Justin Huffman"],
+		"translator": [],
+		"time": "",
+		"sermons": {
+
+		}
+	},
+
+
+
+
+}
