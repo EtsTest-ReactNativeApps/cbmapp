@@ -55,6 +55,8 @@ export default class MenuPage extends Component<{}> {
       console.log(width, height)
   };
 
+  // Replace the icons with a set of custom ones
+
   render() {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>

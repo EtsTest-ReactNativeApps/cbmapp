@@ -42,7 +42,7 @@ const App = StackNavigator(
         Speaker3: { screen: SpeakerJT },
         Speaker4: { screen: SpeakerPW },
         Speaker5: { screen: SpeakerLP },
-        SeriesHome: { screen: SeriesMain },
+        SeriesHome: { screen: SeriesMenu },
         Series1: { screen: Series_1 },
     }, {
         initialRouteName: "Menu" 

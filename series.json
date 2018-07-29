@@ -1,73 +1,92 @@
 {
-	"The Christian Family": {
+	"series1": {
+		"title": "The Christian Family",
 		"speaker": ["Paul Washer"],
 		"translator": ["Larry Pan"],
 		"time": "March 16-18, 2012",
 		"no_of_sermons": 8,
 		"sermons": {
-			"God's Purpose for Creating Man": {
+			"sermon1": {
+				"title": "God's Purpose for Creating Man",
 				"index": 1,
 				"series": "The Christian Family",
 				"date": "March 16, 2012",
 				"speaker": ["Paul Washer"],
 				"translator": ["Larry Pan"],
+				"downloaded": 0,
 			},
-			"Looking to Ancient Roads": {
+			"sermon2": {
+				"title": "Looking to Ancient Roads",
 				"index": 2,
 				"series": "The Christian Family",
 				"date": "March 16, 2012",
 				"speaker": ["Paul Washer"],
 				"translator": ["Larry Pan"],
+				"downloaded": 0,
 			},
-			"The Narrow Gate": {
+			"sermon3": {
+				"title": "The Narrow Gate",
 				"index": 3,
 				"series": "The Christian Family",
 				"date": "March 16, 2012",
 				"speaker": ["Paul Washer"],
 				"translator": ["Larry Pan"],
+				"downloaded": 0,
 			},
-			"Walking the Narrow Path": {
+			"sermon4": {
+				"title": "Walking the Narrow Path",
 				"index": 4,
 				"series": "The Christian Family",
 				"date": "March 16, 2012",
 				"speaker": ["Paul Washer"],
 				"translator": ["Larry Pan"],
+				"downloaded": 0,
 			},
-			"According to Their Fruit": {
+			"sermon5": {
+				"title": "According to Their Fruit",
 				"index": 5,
 				"series": "The Christian Family",
 				"date": "March 16, 2012",
 				"speaker": ["Paul Washer"],
 				"translator": ["Larry Pan"],
+				"downloaded": 0,
 			},
-			"The Way of the Husband and Wife": {
+			"sermon6": {
+				"title": "The Way of the Husband and Wife",
 				"index": 6,
 				"series": "The Christian Family",
 				"date": "March 16, 2012",
 				"speaker": ["Paul Washer"],
 				"translator": ["Larry Pan"],
+				"downloaded": 0,
 			},
-			"The Way of the Husband and Wife (2)": {
+			"sermon7": {
+				"title": "The Way of the Husband and Wife (2)",
 				"index": 7,
 				"series": "The Christian Family",
 				"date": "March 16, 2012",
 				"speaker": ["Paul Washer"],
 				"translator": ["Larry Pan"],
+				"downloaded": 0,
 			},			
-			"Effective Child Discipline": {
+			"sermon8": {
+				"title": "Effective Child Discipline",
 				"index": 8,
 				"series": "The Christian Family",
 				"date": "March 16, 2012",
 				"speaker": ["Paul Washer"],
 				"translator": ["Larry Pan"],
+				"downloaded": 0,
 			},	
 		}
 	},
 
-	"In the Beginning": {
+	"series2": {
+		"title": "In the Beginning",
 		"speaker": ["Justin Huffman"],
 		"translator": [],
 		"time": "",
+		"no_of_sermons": 0,
 		"sermons": {
 
 		}
