@@ -17,8 +17,13 @@ import {
   NavigationActions,
 } from 'react-navigation';
 
+import speakerid from './Series1.js';  // Doesn't pass anything over
+
 import * as settingsData from './settings.json';
 var font_size = settingsData.fontsize;
+import * as speakerData from './speakers.json';
+const speaker = speakerData[speakerid];
+
 
 var titlelocation = Dimensions.get('window').width * 0.23;
 var barheight = Dimensions.get('window').height * 0.07;
@@ -33,7 +38,7 @@ class LogoTitle extends React.Component {
   }
 }
 
-export default class SpeakerJH extends Component<{}> {
+export default class gen_sermon_page extends Component<{}> {
   static navigationOptions = {
       headerTitle: <LogoTitle />,
       title: 'Home',
@@ -52,23 +57,30 @@ export default class SpeakerJH extends Component<{}> {
       console.log(width, height)
   };
   
-  // This is hardcoded. Change it so it can be updated real time
+  //{require(img)} doesnt work, use a switch statement for each case
   render() {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
-          <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>Justin Huffman</Text></View>
-          <Image source = {require('./Resources/JH.jpg')} style = {styles.image}/>
-          <Text style = {styles.desc}>Justin is a graduate of Reformed Theological Seminary, has pastored in the U.S. for over 15 years, and has traveled to every continent except Antarctica—because, as his youngest son has observed, penguins don’t need the gospel.</Text>
-          <Text style = {styles.desc}>He and his wife Chau have four children: Edmond (from Russia), Ransom and Avery (from Vietnam), and Eva (from Arkansas).</Text>
-          <Text style = {styles.desc}>Justin has contributed articles to For the Church, Servants of Grace, and Reformed Perspectives Magazine.</Text>
-          <Text style = {styles.desc}>He recently released the book Grow: The Command to Ever-Expanding Joy. Justin’s passion is to help people see the relevance and sufficiency of God’s Word for daily living.</Text>
+          <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>{speaker.fullname}</Text></View>
+          <Image source = {require("./Resources/JH.jpg")} style = {styles.image}/> 
+          <Text style = {styles.desc}>{speaker.bio1}</Text>
+          <Text style = {styles.desc}>{speaker.bio2}</Text>
+          <Text style = {styles.desc}>{speaker.bio3}</Text>
+          <Text style = {styles.desc}>{speaker.bio4}</Text>
 
           <Text style = {styles.title2}>Series:</Text>
-          <TouchableOpacity>
-              <Text style = {styles.desc}>In the Beginning</Text>
-          </TouchableOpacity>
-
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[0]}</Text></TouchableOpacity>
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[1]}</Text></TouchableOpacity>
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[2]}</Text></TouchableOpacity>
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[3]}</Text></TouchableOpacity>
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[4]}</Text></TouchableOpacity>
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[5]}</Text></TouchableOpacity>
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[6]}</Text></TouchableOpacity>
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[7]}</Text></TouchableOpacity>
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[8]}</Text></TouchableOpacity>
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[9]}</Text></TouchableOpacity>
+          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[10]}</Text></TouchableOpacity>
         </View>
       </ScrollView>
     );

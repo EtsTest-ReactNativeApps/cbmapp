@@ -65,7 +65,7 @@ export default class MenuPage extends Component<{}> {
             <Image source = {require('./Resources/China-Bridge-Logo.png')} style={styles.image}/>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity  style={styles.menu} onPress={() => this.props.navigation.navigate('Announcements')}>
+        <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Announcements')}>
             <Image source = {require('./Resources/Calendar.png')} style={styles.icon}/>
             <Text style={styles.menutext}>Announcements</Text>
         </TouchableOpacity>
@@ -81,7 +81,7 @@ export default class MenuPage extends Component<{}> {
             <Image source = {require('./Resources/Speakers.png')} style={styles.icon}/>
             <Text style={styles.menutext}>Speakers</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menu}>
+        <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Settings')}>
             <Image source = {require('./Resources/Settings.png')} style={styles.icon}/>
             <Text style={styles.menutext}>Settings</Text>
         </TouchableOpacity>

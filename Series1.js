@@ -39,7 +39,7 @@ var j = series1_data.no_of_sermons;
 var button_text = "Download All  \u2193";
 for (const sermon in sermons_data) {
     if (sermon.downloaded == 1) {
-        console.log(i);
+        //console.log(i);
         i += 1;
         continue;
     }
@@ -69,8 +69,9 @@ export default class Series_1 extends Component<{}> {
       console.log(width, height)
   };
 
+  // Need to fix
   download_all() {
-      var content = JSON.parse(fs.readFileSync('./series.json').toString());
+      var content = JSON.parse(fs.readFileSync('series.json', 'utf8').toString()); // Error at readFileSync('series.json', 'utf8')
       for (const sermon in content.series1.sermons) {
           sermon.downloaded = 1;
       };

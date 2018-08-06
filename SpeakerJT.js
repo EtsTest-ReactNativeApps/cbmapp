@@ -17,6 +17,9 @@ import {
   NavigationActions,
 } from 'react-navigation';
 
+import * as settingsData from './settings.json';
+var font_size = settingsData.fontsize;
+
 var titlelocation = Dimensions.get('window').width * 0.23;
 var barheight = Dimensions.get('window').height * 0.07;
 
@@ -87,7 +90,7 @@ const styles = StyleSheet.create({
       borderRadius: sides,
   },
   desc: {
-      fontSize: 15,
+      fontSize: font_size,
       marginTop: 8,
       marginBottom: 8,
   },

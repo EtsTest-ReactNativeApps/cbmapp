@@ -15,6 +15,10 @@ import {
 } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
+import * as speakerData from './speakers.json';
+var speakerid = {
+    id: '',
+};
 
 var titlelocation = Dimensions.get('window').width * 0.23;
 var barheight = Dimensions.get('window').height * 0.07;
@@ -48,10 +52,15 @@ export default class SpeakerMain extends Component<{}> {
       console.log(width, height)
   };
 
+  navigateto(speakerinitials) {
+      speakerid.id = speakerinitials;
+      this.props.navigation.navigate('SpeakerPage');
+  };
+
   render() {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
-        <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker1')}>
+        <TouchableOpacity style={styles.menu} onPress={() => this.navigateto('JH')}>
             <Image source = {require('./Resources/JH.jpg')} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Justin Huffman</Text>

@@ -18,7 +18,9 @@ import MenuPage from './MenuPage';
 import AboutPage from './About';
 import AnnouncementPage from './Announcements';
 import ContactUs from './ContactPage';
+import SettingsPage from './Settings';
 import SpeakerMain from './SpeakerMain';
+import gen_speaker_page from './Speaker_individual';
 import SpeakerJH from './SpeakerJH';
 import SpeakerMD from './SpeakerMD';
 import SpeakerJT from './SpeakerJT';
@@ -36,7 +38,9 @@ const App = StackNavigator(
         About: { screen: AboutPage },
         Announcements: { screen: AnnouncementPage },
         Contact: { screen: ContactUs },
+        Settings: { screen: SettingsPage },
         Speakers: { screen: SpeakerMain },
+        SpeakerPage: { screen: gen_speaker_page },
         Speaker1: { screen: SpeakerJH },
         Speaker2: { screen: SpeakerMD },
         Speaker3: { screen: SpeakerJT },
