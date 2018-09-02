@@ -16,32 +16,84 @@ import {
 import { 
   NavigationActions,
 } from 'react-navigation';
+// import MediaPlayer from "react-native-media-player";
+// import { TrackPlayer, ProgressBar } from 'react-native-track-player';
 
-import speakerid from './Series1.js';  // Doesn't pass anything over
+
+import {series_number} from './Series1.js';
+import {sermon_number} from './Series1.js';
 
 import * as settingsData from './settings.json';
 var font_size = settingsData.fontsize;
-import * as speakerData from './speakers.json';
-const speaker = speakerData[speakerid];
+import * as seriesData from './series.json';
 
+var a = 'series';
+var b = 'sermon';
+var c = series_number.toString();
+var d = sermon_number.toString();
+var e = '_';
+var f = '.mp3';
+var g = './Media/'
 
-var titlelocation = Dimensions.get('window').width * 0.23;
+const Series = a.concat(c);
+const Sermon = b.concat(d);
+const temp2 = Series.concat(e);
+const temp3 = temp2.concat(Sermon);
+const filename = temp3.concat(f);
+const filepath = g.concat(filename);
+
+const temp = seriesData[Series];
+const temp1 = temp.sermons;
+const data = temp1[Sermon];
+
 var barheight = Dimensions.get('window').height * 0.07;
+var wdt = Dimensions.get('window').width * 0.9;
+var hei = Dimensions.get('window').width * 0.7 * 0.9;
+var mgn = Dimensions.get('window').width * 0.05;
 
-class LogoTitle extends React.Component {
-  render() {
-    return (
-      <View style={{flexDirection: 'row'}}>
-        <Text style={{ marginLeft: titlelocation, fontSize: 19, fontWeight: 'bold' }}>Speakers</Text>
-      </View>
-    );
-  }
-}
 
+var button_text = "Download \u2193";
+if (data.downloaded == 1) {
+    button_text = "Downloaded \u2713";
+};
+
+// Set media player
+// MediaPlayer.setVirtualScreenLayout(mgn, 100, wdt, hei, false);
+// MediaPlayer.setBackground('./Resources/China-Bridge-Logo1.png');
+/*
+TrackPlayer.setupPlayer().then(() => {
+    // The player is ready to be used
+});
+
+track = {
+    id: filename,
+    
+    //url: 'http://example.com/avaritia.mp3', // Load media from the network
+    url: filepath, // Load media from the app bundle
+
+    title: data.title,
+    artist: data.speaker,
+    album: data.series,
+    genre: 'Sermon',
+    date: data.date, // RFC 3339
+    
+    //artwork: 'http://example.com/avaritia.png', // Load artwork from the network
+    artwork: require('./Resources/China-Bridge-Logo1.png'), // Load artwork from the app bundle
+};
+
+TrackPlayer.add([track]).then(function() {
+    // The tracks were added
+});
+
+          <ProgressBar
+              progress={this.getProgress()}
+              buffered={this.getBufferedProgress()}
+          />
+
+*/
 export default class gen_sermon_page extends Component<{}> {
   static navigationOptions = {
-      headerTitle: <LogoTitle />,
-      title: 'Home',
+      title: 'Sermon', 
       headerStyle: {
           backgroundColor: '#F3F3F3',
           height: barheight,
@@ -56,40 +108,49 @@ export default class gen_sermon_page extends Component<{}> {
       const {width, height} = Dimensions.get('window')
       console.log(width, height)
   };
+
+  play_media() {
+      //TrackPlayer.play();
+  };
   
-  //{require(img)} doesnt work, use a switch statement for each case
+  download() {
+    if (data.downloaded == 0) {
+        data.downloaded == 1;
+        button_text = "Downloaded \u2713";
+    };
+    alert("This sermon has been downloaded");
+  };
+
+  share() {
+
+  };
+
   render() {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
-          <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>{speaker.fullname}</Text></View>
-          <Image source = {require("./Resources/JH.jpg")} style = {styles.image}/> 
-          <Text style = {styles.desc}>{speaker.bio1}</Text>
-          <Text style = {styles.desc}>{speaker.bio2}</Text>
-          <Text style = {styles.desc}>{speaker.bio3}</Text>
-          <Text style = {styles.desc}>{speaker.bio4}</Text>
+          <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>{data.title}</Text></View>
+          <Image source = {require("./Resources/China-Bridge-Logo1.png")} style = {styles.image}/>
 
-          <Text style = {styles.title2}>Series:</Text>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[0]}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[1]}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[2]}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[3]}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[4]}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[5]}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[6]}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[7]}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[8]}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[9]}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style = {styles.desc}>{speaker.series[10]}</Text></TouchableOpacity>
+          <View style = {styles.button_cont}>
+              <TouchableOpacity style = {styles.button} onPress={() => this.download()}>
+                  <Text style={{color:'#FFFFFF', fontSize: 18, fontWeight: 'bold'}}>{button_text}</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style = {styles.button} onPress={() => this.share()}>
+                  <Text style={{color:'#FFFFFF', fontSize: 18, fontWeight: 'bold'}}>{"Share \u2191"}</Text>
+              </TouchableOpacity>
+          </View>
+
+          <Text style = {styles.desc}>Series: {data.series}</Text>
+          <Text style = {styles.desc}>Date: {data.date}</Text>
+          <Text style = {styles.desc}>Speaker: {data.speaker[0]}</Text>
+          <Text style = {styles.desc}>Translator: {data.translator[0]}</Text>
         </View>
       </ScrollView>
     );
   }
 }
 
-var mgn = Dimensions.get('window').width * 0.05;
-var wdt = Dimensions.get('window').width * 0.9;
-var hei = Dimensions.get('window').width * 0.7 * 0.9;
 var sides = Dimensions.get('window').width * 0.05;
 var topbot = Dimensions.get('window').height * 0.02;
 
@@ -98,6 +159,21 @@ const styles = StyleSheet.create({
   container: {
       margin: mgn,
   },
+  button: {
+      backgroundColor: '#245D8C',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: Dimensions.get('window').height * 0.065,
+      width: wdt * 0.45,
+      borderRadius: 5,
+      margin: 10,
+  },
+  button_cont: {
+      flexDirection: 'row', 
+      justifyContent: 'center', 
+      alignItems: 'center',
+      marginBottom: 15,
+  },
   image: {
       width: wdt,
       height: hei,
@@ -105,12 +181,13 @@ const styles = StyleSheet.create({
       marginBottom: topbot,
       marginLeft: 0,
       marginRight: 0,
-      borderRadius: sides,
+      borderRadius: 0,
   },
   desc: {
       fontSize: font_size,
-      marginTop: 8,
-      marginBottom: 8,
+      marginTop: 5,
+      marginBottom: 5,
+      //fontWeight: 'bold',
   },
   title1: {
       fontSize: 24,

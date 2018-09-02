@@ -15,30 +15,10 @@ import {
 } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
-
-var titlelocation = Dimensions.get('window').width * 0.33;
 var barheight = Dimensions.get('window').height * 0.07;
-
-class LogoTitle extends React.Component {
-  render() {
-    return (
-      <View style={{flexDirection: 'row'}}>
-        <TouchableOpacity>
-          <Image
-            source={require('./Resources/back.png')}
-            style={{ width: 25, height: 25, marginLeft: 15 }}
-            onPress={() => this.props.navigation.navigate('Home')}
-          />
-        </TouchableOpacity>
-        <Text style={{ marginLeft: titlelocation, fontSize: 19, fontWeight: 'bold' }}>Menu</Text>
-      </View>
-    );
-  }
-}
 
 export default class MenuPage extends Component<{}> {
 	static navigationOptions = {
-      headerTitle: <LogoTitle />,
       title: 'Menu',
       headerStyle: {
           backgroundColor: '#F3F3F3',
@@ -69,7 +49,7 @@ export default class MenuPage extends Component<{}> {
             <Image source = {require('./Resources/Calendar.png')} style={styles.icon}/>
             <Text style={styles.menutext}>Announcements</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menu}>
+        <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Downloads')}>
             <Image source = {require('./Resources/Download.png')} style={styles.icon}/>
             <Text style={styles.menutext}>Downloads</Text>
         </TouchableOpacity>
@@ -89,6 +69,10 @@ export default class MenuPage extends Component<{}> {
             <Image source = {require('./Resources/Contact.png')} style={styles.icon}/>
             <Text style={styles.menutext}>Contact Us</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Web')}>
+            <Image source = {require('./Resources/Web.png')} style={styles.icon}/>
+            <Text style={styles.menutext}>Web Page</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('About')}>
             <Image source = {require('./Resources/About.png')} style={styles.icon}/>
             <Text style={styles.menutext}>About Us</Text>
@@ -101,11 +85,13 @@ export default class MenuPage extends Component<{}> {
 var wdt = Dimensions.get('window').width * 0.8;
 var hei = Dimensions.get('window').width * 0.3833 * 0.8;
 var sides = Dimensions.get('window').width * 0.1;
-var topbot = Dimensions.get('window').height * 0.1;
+var topbot = Dimensions.get('window').height * 0.05;
+var h = Dimensions.get('window').height * 0.28;
 
 
 const styles = StyleSheet.create({
   container: {
+      height: h,
       marginTop: 0,
       backgroundColor: '#245D8C',
   },
@@ -114,7 +100,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       flexDirection: 'row',
       marginTop: 0,
-      backgroundColor: 'F3F3F3',
+      backgroundColor: '#F3F3F3',
   },
   headertext: {
       color: 'black',

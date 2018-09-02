@@ -1,4 +1,10 @@
 {
-  "name": "ChinaBridgeApp1",
-  "displayName": "ChinaBridgeApp1"
+  "expo": {
+    "sdkVersion": "27.0.0",
+    "splash": {
+		"image": "./Resources/splashscreen.png",
+		"backgroundColor": "#245D8C",
+		"padding": 20,
+	}
+  }
 }

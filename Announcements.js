@@ -17,23 +17,13 @@ import {
   NavigationActions,
 } from 'react-navigation';
 
-var titlelocation = Dimensions.get('window').width * 0.15;
+// var titlelocation = Dimensions.get('window').width * 0.15;
 var barheight = Dimensions.get('window').height * 0.07;
 
-class LogoTitle extends React.Component {
-  render() {
-    return (
-      <View style={{flexDirection: 'row'}}>
-        <Text style={{ marginLeft: titlelocation, fontSize: 19, fontWeight: 'bold' }}>Announcements</Text>
-      </View>
-    );
-  }
-}
 
 export default class AnnouncementPage extends Component<{}> {
-  static navigationOptions = {
-      headerTitle: <LogoTitle />,
-      title: 'Home',
+  static navigationOptions = {   
+      title: 'Announcements',
       headerStyle: {
           backgroundColor: '#F3F3F3',
           height: barheight,
@@ -55,22 +45,22 @@ export default class AnnouncementPage extends Component<{}> {
       <ScrollView onLayout={this.onLayout.bind(this)}>
           <TouchableOpacity style={styles.container}>
               <View style={styles.calendardate}>
-                <Text style={styles.calendardatetext}>JUNE</Text>
+                <Text style={styles.calendardatetext}>JUNE </Text>
                 <Text style={styles.calendardatetext1}>22-23</Text>
               </View>
               <View style={styles.calendarevent}>
-                <Text style={{fontSize:16, color:'#245D8C'}}>God's Purpose for Creating Man</Text>
+                <Text style={{fontSize:16, color:'#245D8C', fontWeight:'bold'}}>God's Purpose for Creating Man</Text>
                 <Text style={{fontSize:13, marginTop:3}}>Speaker: Paul Washer</Text>
                 <Text style={{fontSize:13}}>Translator: Larry Pan</Text>
               </View>
           </TouchableOpacity>
           <TouchableOpacity style={styles.container}>
               <View style={styles.calendardate}>
-                <Text style={styles.calendardatetext}>SEPT </Text>
+                <Text style={styles.calendardatetext}> SEPT </Text>
                 <Text style={styles.calendardatetext1}>07-09</Text>
               </View>
               <View style={styles.calendarevent}>
-                <Text style={{fontSize:16, color:'#245D8C'}}>Looking to Ancient Roads</Text>
+                <Text style={{fontSize:16, color:'#245D8C', fontWeight:'bold'}}>Looking to Ancient Roads</Text>
                 <Text style={{fontSize:13, marginTop:3}}>Speaker: Paul Washer</Text>
                 <Text style={{fontSize:13}}>Translator: Larry Pan</Text>
               </View>
@@ -81,7 +71,7 @@ export default class AnnouncementPage extends Component<{}> {
                 <Text style={styles.calendardatetext1}>09-11</Text>
               </View>
               <View style={styles.calendarevent}>
-                <Text style={{fontSize:16, color:'#245D8C'}}>The Narrow Gate</Text>
+                <Text style={{fontSize:16, color:'#245D8C', fontWeight:'bold'}}>The Narrow Gate</Text>
                 <Text style={{fontSize:13, marginTop:3}}>Speaker: Paul Washer</Text>
                 <Text style={{fontSize:13}}>Translator: Larry Pan</Text>
               </View>
@@ -155,7 +145,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       flexDirection: 'row',
       marginTop: 0,
-      backgroundColor: 'F3F3F3',
+      backgroundColor: '#F3F3F3',
   },
   headertext: {
       color: 'black',

@@ -9,32 +9,36 @@ import {
   StatusBar
 } from 'react-native';
 import {
-  StackNavigator,
+  createStackNavigator,
 } from 'react-navigation';
 
 import Splash_Screen from './Splash_Screen';
 import MainPage from './MainPage';
 import MenuPage from './MenuPage';
+import WebPage from './WebView';
 import AboutPage from './About';
 import AnnouncementPage from './Announcements';
 import ContactUs from './ContactPage';
 import SettingsPage from './Settings';
-import SpeakerMain from './SpeakerMain';
+import SpeakerMain from './Speaker_main';
 import gen_speaker_page from './Speaker_individual';
 import SpeakerJH from './SpeakerJH';
 import SpeakerMD from './SpeakerMD';
 import SpeakerJT from './SpeakerJT';
 import SpeakerPW from './SpeakerPW';
 import SpeakerLP from './SpeakerLP';
-import SeriesMenu from './SeriesMain';
+import SeriesMenu from './Series_main';
 import Series_1 from './Series1';
+import gen_sermon_page from './Sermon_individual';
+import manage_downloads from './Downloads';
 
 
-const App = StackNavigator(
+const App = createStackNavigator(
     {
         InitScreen: { screen: Splash_Screen },
         Home: { screen: MainPage },
         Menu: { screen: MenuPage },
+        Web: { screen: WebPage },
         About: { screen: AboutPage },
         Announcements: { screen: AnnouncementPage },
         Contact: { screen: ContactUs },
@@ -48,8 +52,10 @@ const App = StackNavigator(
         Speaker5: { screen: SpeakerLP },
         SeriesHome: { screen: SeriesMenu },
         Series1: { screen: Series_1 },
+        Sermon: { screen: gen_sermon_page },
+        Downloads: { screen: manage_downloads },
     }, {
-        initialRouteName: "Menu" 
+        initialRouteName: "Home" 
     }
 );
 export default App;

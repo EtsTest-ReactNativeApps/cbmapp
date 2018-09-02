@@ -19,24 +19,11 @@ import {
 
 import * as settingsData from './settings.json';
 var font_size = settingsData.fontsize;
-
-var titlelocation = Dimensions.get('window').width * 0.28;
 var barheight = Dimensions.get('window').height * 0.07;
-
-class LogoTitle extends React.Component {
-  render() {
-    return (
-      <View style={{flexDirection: 'row'}}>
-        <Text style={{ marginLeft: titlelocation, fontSize: 19, fontWeight: 'bold' }}>About</Text>
-      </View>
-    );
-  }
-}
 
 export default class AboutPage extends Component<{}> {
   static navigationOptions = {
-      headerTitle: <LogoTitle />,
-      title: 'Home',
+      title: 'About Us',
       headerStyle: {
           backgroundColor: '#F3F3F3',
           height: barheight,

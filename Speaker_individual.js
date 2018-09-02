@@ -17,15 +17,16 @@ import {
   NavigationActions,
 } from 'react-navigation';
 
-import speakerid from './SpeakerMain.js';  // Doesn't pass anything over
+import speakerid from './Speaker_main.js';  // Doesn't pass anything over
 
 import * as settingsData from './settings.json';
 var font_size = settingsData.fontsize;
 import * as speakerData from './speakers.json';
-const speaker = speakerData[speakerid];
+//alert (speakerid);
+//const speaker = speakerData[speakerid];
 
 
-var titlelocation = Dimensions.get('window').width * 0.23;
+// var titlelocation = Dimensions.get('window').width * 0.23;
 var barheight = Dimensions.get('window').height * 0.07;
 
 class LogoTitle extends React.Component {
@@ -40,8 +41,8 @@ class LogoTitle extends React.Component {
 
 export default class gen_speaker_page extends Component<{}> {
   static navigationOptions = {
-      headerTitle: <LogoTitle />,
-      title: 'Home',
+      
+      title: 'Speakers',
       headerStyle: {
           backgroundColor: '#F3F3F3',
           height: barheight,

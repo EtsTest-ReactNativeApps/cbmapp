@@ -17,23 +17,11 @@ import {
   NavigationActions,
 } from 'react-navigation';
 
-var titlelocation = Dimensions.get('window').width * 0.21;
 var barheight = Dimensions.get('window').height * 0.07;
-
-class LogoTitle extends React.Component {
-  render() {
-    return (
-      <View style={{flexDirection: 'row'}}>
-        <Text style={{ marginLeft: titlelocation, fontSize: 19, fontWeight: 'bold' }}>Contact Us</Text>
-      </View>
-    );
-  }
-}
 
 export default class ContactUs extends Component<{}> {
   static navigationOptions = {
-      headerTitle: <LogoTitle />,
-      title: 'Home',
+      title: 'Contact Us',
       headerStyle: {
           backgroundColor: '#F3F3F3',
           height: barheight,
@@ -113,7 +101,7 @@ const styles = StyleSheet.create({
   },
   container_text: {
       width: wdt*0.23,
-      fontSize: 18,
+      //fontSize: 18,
   },
   container_button: {
       flex: 1,
@@ -126,7 +114,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#245D8C',
       justifyContent: 'center',
       alignItems: 'center',
-      height: Dimensions.get('window').height * 0.1,
+      height: Dimensions.get('window').height * 0.08,
       width: wdt* 0.4,
       borderRadius: 5,
   },
@@ -139,7 +127,7 @@ const styles = StyleSheet.create({
       fontSize: 16,
   },
   box2: {
-      height: Dimensions.get('window').height * 0.5,
+      height: Dimensions.get('window').height * 0.45,
       marginTop: mgn*1.5,
       width: wdt,
       borderWidth: 1,

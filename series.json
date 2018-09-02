@@ -3,7 +3,7 @@
 		"title": "The Christian Family",
 		"speaker": ["Paul Washer"],
 		"translator": ["Larry Pan"],
-		"time": "March 16-18, 2012",
+		"time": "MARCH 2012",
 		"no_of_sermons": 8,
 		"sermons": {
 			"sermon1": {
@@ -82,17 +82,81 @@
 	},
 
 	"series2": {
-		"title": "In the Beginning",
-		"speaker": ["Justin Huffman"],
-		"translator": [],
-		"time": "",
+		"title": "Knowing God",
+		"speaker": ["Paul Washer"],
+		"translator": ["Larry Pan"],
+		"time": "AUGUST 2014",
 		"no_of_sermons": 0,
 		"sermons": {
 
 		}
 	},
 
+	"series3": {
+		"title": "The Perfection of God",
+		"speaker": ["Paul Washer"],
+		"translator": ["Larry Pan"],
+		"time": "DECEMBER 2014",
+		"no_of_sermons": 0,
+		"sermons": {
 
+		}
+	},
+
+	"series4": {
+		"title": "The Omniscience of God",
+		"speaker": ["Paul Washer"],
+		"translator": ["Larry Pan"],
+		"time": "MAY 2015",
+		"no_of_sermons": 0,
+		"sermons": {
+
+		}
+	},
+
+	"series5": {
+		"title": "The Holiness of God",
+		"speaker": ["Paul Washer"],
+		"translator": ["Larry Pan"],
+		"time": "JULY 2015",
+		"no_of_sermons": 0,
+		"sermons": {
+
+		}
+	},
+
+	"series6": {
+		"title": "Our Response to God's Holiness",
+		"speaker": ["Paul Washer"],
+		"translator": ["Larry Pan"],
+		"time": "MARCH 2012",
+		"no_of_sermons": 0,
+		"sermons": {
+
+		}
+	},
+
+	"series7": {
+		"title": "The Servant Song",
+		"speaker": ["Paul Washer"],
+		"translator": ["Larry Pan"],
+		"time": "DECEMBER 2015",
+		"no_of_sermons": 0,
+		"sermons": {
+
+		}
+	},
+
+	"series8": {
+		"title": "In the Beginning",
+		"speaker": ["Justin Huffman"],
+		"translator": [],
+		"time": "APRIL 2016",
+		"no_of_sermons": 0,
+		"sermons": {
+
+		}
+	},
 
 
 }
