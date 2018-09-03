@@ -20,9 +20,11 @@
   },
   "dependencies": {
     "expo": "^27.0.1",
+    "prop-types": "^15.6.2",
     "react": "^16.3.1",
     "react-native": "^0.55.4",
     "react-native-elements": "^0.19.1",
+    "react-native-email": "^1.0.1",
     "react-native-filesystem": "^0.1.0",
     "react-native-fs": "^2.11.15",
     "react-native-media-player": "^0.3.5",
@@ -34,6 +36,7 @@
     "react-native-wheel-scroll-picker": "^0.1.9",
     "react-navigation": "^2.12.1",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "tcomb-form-native": "^0.6.16"
   }
 }

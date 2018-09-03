@@ -61,14 +61,6 @@ export default class MenuPage extends Component<{}> {
             <Image source = {require('./Resources/Speakers.png')} style={styles.icon}/>
             <Text style={styles.menutext}>Speakers</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Settings')}>
-            <Image source = {require('./Resources/Settings.png')} style={styles.icon}/>
-            <Text style={styles.menutext}>Settings</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Contact')}>
-            <Image source = {require('./Resources/Contact.png')} style={styles.icon}/>
-            <Text style={styles.menutext}>Contact Us</Text>
-        </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Web')}>
             <Image source = {require('./Resources/Web.png')} style={styles.icon}/>
             <Text style={styles.menutext}>Web Page</Text>
@@ -76,6 +68,14 @@ export default class MenuPage extends Component<{}> {
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('About')}>
             <Image source = {require('./Resources/About.png')} style={styles.icon}/>
             <Text style={styles.menutext}>About Us</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Contact')}>
+            <Image source = {require('./Resources/Contact.png')} style={styles.icon}/>
+            <Text style={styles.menutext}>Contact Us</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Settings')}>
+            <Image source = {require('./Resources/Settings.png')} style={styles.icon}/>
+            <Text style={styles.menutext}>Settings</Text>
         </TouchableOpacity>
       </ScrollView>
     );

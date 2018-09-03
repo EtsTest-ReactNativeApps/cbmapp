@@ -17,6 +17,18 @@ import {
   NavigationActions,
 } from 'react-navigation';
 
+import email from 'react-native-email';
+import t from 'tcomb-form-native';
+
+const Form = t.form.Form;
+
+const User = t.struct({
+  name: t.String,
+  email: t.String,
+  phone: t.maybe(t.String),
+  message: t.String,
+});
+
 var barheight = Dimensions.get('window').height * 0.07;
 
 export default class ContactUs extends Component<{}> {
@@ -37,45 +49,36 @@ export default class ContactUs extends Component<{}> {
       console.log(width, height)
   };
 
-  send_message() {
+  // Sends message as an email to some address
+  // NEED AN EMAIL SERVER BUT FOR NOW IT JUST REDIRECTS TO AN EMAIL APP
+  handleSubmit = () => {
+    const value = this._form.getValue(); // use that ref to get the form value
 
-  };
+    var temp = "Message from ";
+    const title = temp.concat(value.name);
+    const to = ['billsunswag@gmail.com']; 
+    email(to, {
+        subject: title,
+        body: value.message,
+    }).catch(console.error)
+  }
 
   render() {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container_outer}>
-          <View style = {styles.container_inner}>
-              <View style = {styles.container_text}><Text style = {styles.title}>Name</Text></View>
-              <TextInput style = {styles.box1}
-                  underlineColorAndroid = 'transparent'
-                  onChangeText = {(text) => this.setState({text})}
-              />
-          </View>
-          <View style = {styles.container_inner}>
-              <View style = {styles.container_text}><Text style = {styles.title}>Email</Text></View>
-              <TextInput style = {styles.box1}
-                  underlineColorAndroid = 'transparent'
-                  onChangeText = {(text) => this.setState({text})}
-              />
-          </View>
-          <View style = {styles.container_inner}>
-              <View style = {styles.container_text}><Text style = {styles.title}>Phone</Text></View>
-              <TextInput style = {styles.box1}
-                  underlineColorAndroid = 'transparent'
-                  onChangeText = {(text) => this.setState({text})}
-              />
-          </View>
-          <TextInput style = {styles.box2}
-              multiline = {true}
-              numberOfLines = {20}
-              placeholder = "Your message here"
-              onChangeText = {(text) => this.setState({text})}
-          />
+
+          <Form type={User} ref={c => this._form = c} />
+
           <View style = {styles.container_button}>
-            <TouchableOpacity style = {styles.button} onPress={() => this.send_message()}>
+            <TouchableOpacity style = {styles.button} onPress={() => this.handleSubmit()}>
               <Text style={{color:'#FFFFFF', fontSize: 19, fontWeight: 'bold'}}>Submit</Text>
             </TouchableOpacity>
+          </View>
+          <View style = {{alignItems: 'center'}}>
+              <Text style = {styles.contactinfo}>107 Timberbank Blvd, Scarbrough, ON M1W 1Z8</Text>
+              <Text style = {styles.contactinfo}>1-647-859-0888</Text>
+              <Text style = {styles.contactinfo}>patrickyan@christgc.org</Text>
           </View>
         </View>
       </ScrollView>
@@ -91,7 +94,8 @@ var sides = Dimensions.get('window').width * 0.05;
 
 const styles = StyleSheet.create({
   container_outer: {
-      margin: mgn,
+      padding: mgn,
+      backgroundColor: '#ffffff',
   },
   container_inner: {
       flexDirection: 'row',
@@ -109,6 +113,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       height: Dimensions.get('window').height * 0.2,
       width: wdt,
+      marginBottom: 20,
   },
   button: {
       backgroundColor: '#245D8C',
@@ -140,4 +145,39 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       color: '#245D8C',
   },
+  contactinfo: {
+      fontSize: 14,
+      marginTop: 5,
+      paddingBottom: 5,
+  }
 });
+
+/* 
+          <View style = {styles.container_inner}>
+              <View style = {styles.container_text}><Text style = {styles.title}>Name</Text></View>
+              <TextInput style = {styles.box1}
+                  underlineColorAndroid = 'transparent'
+                  onChangeText = {(text) => this.setState({text})}
+              />
+          </View>
+          <View style = {styles.container_inner}>
+              <View style = {styles.container_text}><Text style = {styles.title}>Email</Text></View>
+              <TextInput style = {styles.box1}
+                  underlineColorAndroid = 'transparent'
+                  onChangeText = {(text) => this.setState({text})}
+              />
+          </View>
+          <View style = {styles.container_inner}>
+              <View style = {styles.container_text}><Text style = {styles.title}>Phone</Text></View>
+              <TextInput style = {styles.box1}
+                  underlineColorAndroid = 'transparent'
+                  onChangeText = {(text) => this.setState({text})}
+              />
+          </View>
+          <TextInput style = {styles.box2}
+              multiline = {true}
+              numberOfLines = {20}
+              placeholder = "Your message here"
+              onChangeText = {(text) => this.setState({text})}
+          />
+*/

@@ -53,6 +53,11 @@ export default class AboutPage extends Component<{}> {
           <Text style = {styles.desc}>Our common vision is to help the Chinese churches return to the orthodox beliefs revealed in the Bible, to pass on the ancient gospel recognized by saints in history, to resist the impact of teachings incompatible with the Bible in the modern church, to help the people of God stand firm in the faith. </Text>
           <Text style = {styles.desc}>We currently provide free videos and audio recordings of the China Bridge conferences. Our speakers allow the sharing of their sermons in local churches.</Text>
           <Image source = {require('./Resources/1.png')} style = {styles.image1}/>
+          <View style = {{alignItems: 'center'}}>
+              <Text style = {styles.contactinfo}>107 Timberbank Blvd, Scarbrough, ON M1W 1Z8</Text>
+              <Text style = {styles.contactinfo}>1-647-859-0888</Text>
+              <Text style = {styles.contactinfo}>patrickyan@christgc.org</Text>
+          </View>
         </View>
       </ScrollView>
     );
@@ -85,6 +90,7 @@ const styles = StyleSheet.create({
   },
   image1: {
       marginTop: 20,
+      marginBottom: 20,
       width: Dimensions.get('window').width * 0.9,
   },
   desc: {
@@ -98,4 +104,9 @@ const styles = StyleSheet.create({
       marginBottom: 8,
       fontWeight: 'bold',
   },
+  contactinfo: {
+      fontSize: 14,
+      marginTop: 5,
+      marginBottom: 5,
+  }
 });

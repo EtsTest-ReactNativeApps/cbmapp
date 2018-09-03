@@ -68,7 +68,7 @@ export default class manage_downloads extends Component<{}> {
   
   constructor(props) {
       super(props);
-      this.state = {checked: true};
+      this.state = {checked: false};
   };
 
   onLayout(e) {
