@@ -1,3 +1,11 @@
+Gospel China Bridge
+
+As per the requirements laid out by the Gospel China Bridge organization, the app was required to better serve their users (especially in China), to allow them to stream and watch Sunday sermons. In China, since websites with content related to Christianity are usually banned, the organization calls for a more reliable method of delivering the information. Thus, an app with a flexible back-end server setup was designed.
+
+The main function of the app is to allow users, especially Chinese users, to stream, watch, or listen to Sunday sermons in audio and video format. It allows users to stream or download the content, as well as manage their downloads. The app also displays announcements, events, speakers, and general information about the Gospel China Bridge organization.
+
+
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
