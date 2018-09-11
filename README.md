@@ -1,4 +1,4 @@
-Gospel China Bridge
+## Gospel China Bridge
 
 As per the requirements laid out by the Gospel China Bridge organization, the app was required to better serve their users (especially in China), to allow them to stream and watch Sunday sermons. In China, since websites with content related to Christianity are usually banned, the organization calls for a more reliable method of delivering the information. Thus, an app with a flexible back-end server setup was designed.
 
