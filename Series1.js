@@ -71,10 +71,7 @@ export default class Series_1 extends Component<{}> {
   };
 
   go_to_sermon(series_no, sermon_no) { // NOT CHANGING THE GLOBAL VARIABLES
-      series_number = series_no;
-      sermon_number = sermon_no;
-      this.props.navigation.navigate('Sermon');
-      return series_number, sermon_number;
+      this.props.navigation.navigate('Sermon', { series_number: series_no, sermon_number: sermon_no });
   };
 
   // Generate the blocks based on the JSON file
@@ -181,9 +178,6 @@ export default class Series_1 extends Component<{}> {
     );
   } 
 }
-
-export {series_number};
-export {sermon_number};
 
 var wdt = Dimensions.get('window').width * 0.8;
 var hei = Dimensions.get('window').width * 0.3833 * 0.8;

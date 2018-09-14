@@ -16,35 +16,18 @@ import {
 import { 
   NavigationActions,
 } from 'react-navigation';
+import PropTypes from 'prop-types';
 // import MediaPlayer from "react-native-media-player";
 // import { TrackPlayer, ProgressBar } from 'react-native-track-player';
 
 
-import {series_number} from './Series1.js';
-import {sermon_number} from './Series1.js';
+// import {series_number} from './Series1.js';
+// import {sermon_number} from './Series1.js';
 
 import * as settingsData from './settings.json';
 var font_size = settingsData.fontsize;
 import * as seriesData from './series.json';
 
-var a = 'series';
-var b = 'sermon';
-var c = series_number.toString();
-var d = sermon_number.toString();
-var e = '_';
-var f = '.mp3';
-var g = './Media/'
-
-const Series = a.concat(c);
-const Sermon = b.concat(d);
-const temp2 = Series.concat(e);
-const temp3 = temp2.concat(Sermon);
-const filename = temp3.concat(f);
-const filepath = g.concat(filename);
-
-const temp = seriesData[Series];
-const temp1 = temp.sermons;
-const data = temp1[Sermon];
 
 var barheight = Dimensions.get('window').height * 0.07;
 var wdt = Dimensions.get('window').width * 0.9;
@@ -53,9 +36,11 @@ var mgn = Dimensions.get('window').width * 0.05;
 
 
 var button_text = "Download \u2193";
+/*
 if (data.downloaded == 1) {
     button_text = "Downloaded \u2713";
 };
+*/
 
 // Set media player
 // MediaPlayer.setVirtualScreenLayout(mgn, 100, wdt, hei, false);
@@ -103,6 +88,11 @@ export default class gen_sermon_page extends Component<{}> {
           fontWeight: 'bold',
       },
   };
+
+  /*static propTypes = {
+      sermon_number: PropTypes.number.isRequired,
+      series_number: PropTypes.number.isRequired,
+  };*/
   
   onLayout(e) {
       const {width, height} = Dimensions.get('window')
@@ -113,12 +103,12 @@ export default class gen_sermon_page extends Component<{}> {
       //TrackPlayer.play();
   };
   
-  download() {
+  download() { /*
     if (data.downloaded == 0) {
         data.downloaded == 1;
         button_text = "Downloaded \u2713";
-    };
-    alert("This sermon has been downloaded");
+    }; */
+    alert("This sermon has been downloaded"); 
   };
 
   share() {
@@ -126,6 +116,28 @@ export default class gen_sermon_page extends Component<{}> {
   };
 
   render() {
+  	const {navigation} = this.props;
+  	const series_number = navigation.getParam('series_number', 0)
+  	const sermon_number = navigation.getParam('sermon_number', 0)
+  	var a = 'series';
+	var b = 'sermon';
+	var c = series_number.toString();
+	var d = sermon_number.toString();
+	var e = '_';
+	var f = '.mp3';
+	var g = './Media/';
+
+	const Series = a.concat(c);
+	const Sermon = b.concat(d);
+	const temp2 = Series.concat(e);
+	const temp3 = temp2.concat(Sermon);
+	const filename = temp3.concat(f);  
+	const filepath = g.concat(filename);
+
+	const temp = seriesData[Series];
+	const temp1 = temp.sermons;
+	const data = temp1[Sermon];
+
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
