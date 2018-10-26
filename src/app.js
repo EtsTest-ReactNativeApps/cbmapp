@@ -12,9 +12,9 @@ import {
   createStackNavigator,
 } from 'react-navigation';
 
-import Splash_Screen from './views/main/Splash_Screen';
-import MainPage from './views/main/MainPage';
-import MenuPage from './views/main/MenuPage';
+import Splash_Screen from 'views/main/Splash_Screen';
+import MainPage from 'views/main/MainPage';
+import MenuPage from 'views/main/MenuPage';
 import WebPage from './views/main/WebView';
 import AboutPage from './views/main/About';
 import AnnouncementPage from './views/announcements/Announcements';
@@ -55,7 +55,7 @@ const App = createStackNavigator(
         Sermon: { screen: gen_sermon_page },
         Downloads: { screen: manage_downloads },
     }, {
-        initialRouteName: "Home" 
+        initialRouteName: "Home"
     }
 );
 export default App;

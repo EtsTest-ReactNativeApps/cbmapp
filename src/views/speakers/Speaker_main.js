@@ -48,35 +48,35 @@ export default class SpeakerMain extends Component<{}> {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker1')}>
-            <Image source = {require('./Resources/JH.jpg')} style={styles.icon}/>
+            <Image source = {require('resources/JH.jpg')} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Justin Huffman</Text>
                 <Text style={styles.menutext}>Series: In the Beginning</Text>
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker2')}>
-            <Image source = {require('./Resources/MD.jpg')} style={styles.icon}/>
+            <Image source = {require('resources/MD.jpg')} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Michael Durham</Text>
                 <Text style={styles.menutext}>Series: Desperate Dependence, The Doctrine of Faith, A study of The Bride of Christ, The Church-Household of the living God</Text>
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker3')}>
-            <Image source = {require('./Resources/JT.jpg')} style={styles.icon}/>
+            <Image source = {require('resources/JT.jpg')} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Jamey Tucker</Text>
                 <Text style={styles.menutext}>Series: </Text>
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker4')}>
-            <Image source = {require('./Resources/PW.jpg')} style={styles.icon}/>
+            <Image source = {require('resources/PW.jpg')} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Paul David Washer</Text>
                 <Text style={styles.menutext}>Series: The Christian Family, Knowing God, The Perfection of God, The Omniscience of God, The Holiness of God, Our Response to God's Holiness, ...</Text>
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker5')}>
-            <Image source = {require('./Resources/LP.jpg')} style={styles.icon}/>
+            <Image source = {require('resources/LP.jpg')} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Larry Pan</Text>
                 <Text style={styles.menutext}>Series: The Christian Family, Knowing God, The Perfection of God, The Omniscience of God, The Holiness of God, Our Response to God's Holiness, ...</Text>

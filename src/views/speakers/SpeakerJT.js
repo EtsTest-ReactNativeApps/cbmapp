@@ -46,7 +46,7 @@ export default class SpeakerJT extends Component<{}> {
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
           <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>Jamey Tucker</Text></View>
-          <Image source = {require('./Resources/JT.jpg')} style = {styles.image}/>
+          <Image source = {require('resources/JT.jpg')} style = {styles.image}/>
           <Text style = {styles.desc}>I am Pastor Jamey Tucker. The Lord has blessed my life with a godly and supportive wife, Jessica, to whom I have been married since July 31, 1993. Since our union in marriage we have been favored by the Lord with eight children (Hannah, Abi, Gracie, Zachariah, Zebedee, Lydia, Ida-Marie, and Malachi). “Children are an heritage of the Lord: and the fruit of the womb is his reward”.</Text>
           <Text style = {styles.desc}>I currently serve as pastor of Eureka Primitive Baptist Church. Eureka is a tremendously generous church which seeks to exhibit through doctrine and pure lives the glory and grace of Jesus Christ. Please feel free and welcome to contact me for further details, questions, commnets, and spiritual communication.</Text>
 
