@@ -8,52 +8,52 @@ The main function of the app is to allow users, especially Chinese users, to str
 ### Screenshots
 
 #### Loading screen
-<img src="/Screenshots/1.jpg" width="300">
+<img src="docs/images/1.jpg" width="300">
 
 #### Home
-<img src="/Screenshots/2.jpg" width="300">
+<img src="docs/images/2.jpg" width="300">
 
 #### Menu
-<img src="/Screenshots/3a.jpg" width="300">
+<img src="docs/images/3a.jpg" width="300">
 
 #### Menu (cont.)
-<img src="/Screenshots/3b.jpg" width="300">
+<img src="docs/images/3b.jpg" width="300">
 
 #### Events
-<img src="/Screenshots/4.jpg" width="300">
+<img src="docs/images/4.jpg" width="300">
 
 #### Downloads
-<img src="/Screenshots/5a.jpg" width="300">
+<img src="docs/images/5a.jpg" width="300">
 
 #### Downloads (cont.)
-<img src="/Screenshots/5b.jpg" width="300">
+<img src="docs/images/5b.jpg" width="300">
 
 #### Series view
-<img src="/Screenshots/6a.jpg" width="300">
+<img src="docs/images/6a.jpg" width="300">
 
 #### Sermons view
-<img src="/Screenshots/6b.jpg" width="300">
+<img src="docs/images/6b.jpg" width="300">
 
 #### Play sermon (in progress)
-<img src="/Screenshots/6e.jpg" width="300">
+<img src="docs/images/6e.jpg" width="300">
 
 #### Speakers menu
-<img src="/Screenshots/7a.jpg" width="300">
+<img src="docs/images/7a.jpg" width="300">
 
 #### Speaker page
-<img src="/Screenshots/7b.jpg" width="300">
+<img src="docs/images/7b.jpg" width="300">
 
 #### Web view
-<img src="/Screenshots/8.jpg" width="300">
+<img src="docs/images/8.jpg" width="300">
 
 #### About
-<img src="/Screenshots/9.jpg" width="300">
+<img src="docs/images/9.jpg" width="300">
 
 #### Contact form
-<img src="/Screenshots/10.jpg" width="300">
+<img src="docs/images/10.jpg" width="300">
 
 #### Settings
-<img src="/Screenshots/11.jpg" width="300">
+<img src="docs/images/11.jpg" width="300">
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 

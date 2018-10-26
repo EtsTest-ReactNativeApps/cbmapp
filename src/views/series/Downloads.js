@@ -53,7 +53,7 @@ export default class manage_downloads extends Component<{}> {
       title: 'Manage Downloads', 
       headerRight: (
           <TouchableOpacity onPress={() => remove_downloads()}> // Doesn't work yet
-            <Image source = {require('./Resources/Delete.png')} style={{width: barheight*0.7, height: barheight*0.7, marginRight: 10}}/>
+            <Image source = {require('resources/Delete.png')} style={{width: barheight*0.7, height: barheight*0.7, marginRight: 10}}/>
           </TouchableOpacity>
       ),
       headerStyle: {

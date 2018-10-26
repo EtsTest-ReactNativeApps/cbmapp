@@ -44,7 +44,7 @@ if (data.downloaded == 1) {
 
 // Set media player
 // MediaPlayer.setVirtualScreenLayout(mgn, 100, wdt, hei, false);
-// MediaPlayer.setBackground('./Resources/China-Bridge-Logo1.png');
+// MediaPlayer.setBackground('resources/China-Bridge-Logo1.png');
 /*
 TrackPlayer.setupPlayer().then(() => {
     // The player is ready to be used
@@ -63,7 +63,7 @@ track = {
     date: data.date, // RFC 3339
     
     //artwork: 'http://example.com/avaritia.png', // Load artwork from the network
-    artwork: require('./Resources/China-Bridge-Logo1.png'), // Load artwork from the app bundle
+    artwork: require('resources/China-Bridge-Logo1.png'), // Load artwork from the app bundle
 };
 
 TrackPlayer.add([track]).then(function() {
@@ -142,7 +142,7 @@ export default class gen_sermon_page extends Component<{}> {
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
           <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>{data.title}</Text></View>
-          <Image source = {require("./Resources/China-Bridge-Logo1.png")} style = {styles.image}/>
+          <Image source = {require("resources/China-Bridge-Logo1.png")} style = {styles.image}/>
 
           <View style = {styles.button_cont}>
               <TouchableOpacity style = {styles.button} onPress={() => this.download()}>

@@ -13,11 +13,11 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { 
+import {
   NavigationActions,
 } from 'react-navigation';
 
-import * as settingsData from './settings.json';
+import * as settingsData from '../settings/settings.json';
 var font_size = settingsData.fontsize;
 var barheight = Dimensions.get('window').height * 0.07;
 
@@ -33,26 +33,26 @@ export default class AboutPage extends Component<{}> {
           fontWeight: 'bold',
       },
   };
-  
+
   onLayout(e) {
       const {width, height} = Dimensions.get('window')
       console.log(width, height)
   };
-  
+
   // This is hardcoded. Change it so it can be updated real time
   render() {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
           <View style = {styles.containerinner}>
-            <Image source = {require('./Resources/China-Bridge-Logo.png')} style = {styles.image}/>
+            <Image source = {require('resources/China-Bridge-Logo.png')} style = {styles.image}/>
           </View>
           <Text style = {styles.title}>Ministry Introduction</Text>
           <Text style = {styles.desc}>The Gospel China Bridge ministry is mainly for Chinese Christians. We hold 4-6 conferences each year. he purpose of our ministry is to provide biblical Christian teaching to our brothers and sisters.</Text>
           <Text style = {styles.desc}>The lecturers of “Gospel China Bridge” are mostly from the English-speaking world. They are conservative, loyal to the Word of God, and have a burden for teaching Chinese Christians. </Text>
           <Text style = {styles.desc}>Our common vision is to help the Chinese churches return to the orthodox beliefs revealed in the Bible, to pass on the ancient gospel recognized by saints in history, to resist the impact of teachings incompatible with the Bible in the modern church, to help the people of God stand firm in the faith. </Text>
           <Text style = {styles.desc}>We currently provide free videos and audio recordings of the China Bridge conferences. Our speakers allow the sharing of their sermons in local churches.</Text>
-          <Image source = {require('./Resources/1.png')} style = {styles.image1}/>
+          <Image source = {require('resources/1.png')} style = {styles.image1}/>
           <View style = {{alignItems: 'center'}}>
               <Text style = {styles.contactinfo}>107 Timberbank Blvd, Scarbrough, ON M1W 1Z8</Text>
               <Text style = {styles.contactinfo}>1-647-859-0888</Text>

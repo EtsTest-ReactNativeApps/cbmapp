@@ -46,7 +46,7 @@ export default class SpeakerPW extends Component<{}> {
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
           <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>Paul David Washer</Text></View>
-          <Image source = {require('./Resources/PW.jpg')} style = {styles.image}/>
+          <Image source = {require('resources/PW.jpg')} style = {styles.image}/>
           <Text style = {styles.desc}>Paul David Washer (born 1961) is the founder, director and missions coordinator of HeartCry Missionary Society, which supports indigenous missionary work. His sermons tend to have an evangelistic focus on the gospel and the doctrine of the assurance of salvation and predestination, and he frequently speaks against modern church practices such as the sinner’s prayer, and a focus on numerical church growth.</Text>
           <Text style = {styles.desc}>Paul Washer says he was born again while studying to become an oil and gas lawyer at the University of Texas. Upon graduation, he attended Southwestern Baptist Theological Seminary and achieved a Master of Divinity degree. He moved to Peru where he became a missionary proclaiming the gospel for 10 years, after which he returned to the United States. Washer resides in Radford, VA, where he lives with his wife and four children.</Text>
 
