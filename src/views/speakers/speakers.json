@@ -2,7 +2,7 @@
 	"JH": {
 		"initials": "JH",
 		"fullname": "Justin Huffman",
-		"portrait": "./Resources/JH.jpg",
+		"portrait": "resources/JH.jpg",
 		"series": ["In the Beginning"],
 		"bio1": "Justin is a graduate of Reformed Theological Seminary, has pastored in the U.S. for over 15 years, and has traveled to every continent except Antarctica—because, as his youngest son has observed, penguins don’t need the gospel.",
 		"bio2": "He and his wife Chau have four children: Edmond (from Russia), Ransom and Avery (from Vietnam), and Eva (from Arkansas).",
@@ -12,7 +12,7 @@
 	"MD": {
 		"initials": "MD",
 		"fullname": "Michael Durham",
-		"portrait": "./Resources/MD.jpg",
+		"portrait": "resources/MD.jpg",
 		"series": ["Desperate Dependence", "The Doctrine of Faith", "A study of The Bride of Christ", "The Church-Household of the living God"],
 		"bio1": "Michael Durham is pastor of Oak Grove Baptist Church in Paducah, KY. He believed to have been saved because of a prayer he prayed as a child, and even preached for over a decade before God truly converted him.",
 		"bio2": "God called Michael into the ministry after his conversion, and in 1993 he accepted the pastorate at Oak Grove.",
@@ -22,7 +22,7 @@
 	"JT": {
 		"initials": "JT",
 		"fullname": "Jamey Tucker",
-		"portrait": "./Resources/JT.jpg",
+		"portrait": "resources/JT.jpg",
 		"series": [],
 		"bio1": "I am Pastor Jamey Tucker. The Lord has blessed my life with a godly and supportive wife, Jessica, to whom I have been married since July 31, 1993. Since our union in marriage we have been favored by the Lord with eight children (Hannah, Abi, Gracie, Zachariah, Zebedee, Lydia, Ida-Marie, and Malachi). “Children are an heritage of the Lord: and the fruit of the womb is his reward”.",
 		"bio2": "I currently serve as pastor of Eureka Primitive Baptist Church. Eureka is a tremendously generous church which seeks to exhibit through doctrine and pure lives the glory and grace of Jesus Christ. Please feel free and welcome to contact me for further details, questions, commnets, and spiritual communication.",
@@ -32,7 +32,7 @@
 	"PW": {
 		"initials": "PW",
 		"fullname": "Paul David Washer",
-		"portrait": "./Resources/PW.jpg",
+		"portrait": "resources/PW.jpg",
 		"series": ["The Christian Family", "Knowing God", "The Perfection of God", "The Omniscience of God", "The Holiness of God", "Our Response to God's Holiness", "The Servant Song", "The Righteousness of God", "The Biblical Family", "God is Truth", "The Faithfulness of God"],
 		"bio1": "Paul David Washer (born 1961) is the founder, director and missions coordinator of HeartCry Missionary Society, which supports indigenous missionary work. His sermons tend to have an evangelistic focus on the gospel and the doctrine of the assurance of salvation and predestination, and he frequently speaks against modern church practices such as the sinner’s prayer, and a focus on numerical church growth.",
 		"bio2": "Paul Washer says he was born again while studying to become an oil and gas lawyer at the University of Texas. Upon graduation, he attended Southwestern Baptist Theological Seminary and achieved a Master of Divinity degree. He moved to Peru where he became a missionary proclaiming the gospel for 10 years, after which he returned to the United States. Washer resides in Radford, VA, where he lives with his wife and four children.",
@@ -42,7 +42,7 @@
 	"LP": {
 		"initials": "LP",
 		"fullname": "Larry Pan",
-		"portrait": "./Resources/LP.jpg",
+		"portrait": "resources/LP.jpg",
 		"series": ["The Christian Family", "Knowing God", "The Perfection of God", "The Omniscience of God", "The Holiness of God", "Our Response to God's Holiness", "The Servant Song", "The Righteousness of God", "The Biblical Family", "God is Truth", "The Faithfulness of God"],
 		"bio1": "Larry Pan was born in Taiwan.",
 		"bio2": "He immigrated to Hong Kong with his parents in 1973 and went to study in Canada in 1975. Upon his conversion to Christ in 1977, he went to study in Millar Memorial Bible Institute for three years in preparation for the ministry.",

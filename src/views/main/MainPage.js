@@ -13,7 +13,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { 
+import {
   NavigationActions,
 } from 'react-navigation';
 
@@ -25,7 +25,7 @@ export default class MainPage extends Component<{}> {
 	    title: 'Home',
       headerRight: (
           <TouchableOpacity> // Doesn't work yet
-            <Image source = {require('./Resources/menu.png')} style={{width: barheight*0.7, height: barheight*0.7, marginRight: 10}}/>
+            <Image source = {require('resources/menu.png')} style={{width: barheight*0.7, height: barheight*0.7, marginRight: 10}}/>
           </TouchableOpacity>
       ),
 	    headerStyle: {
@@ -37,19 +37,19 @@ export default class MainPage extends Component<{}> {
 	      	fontWeight: 'bold',
 	    },
   };
-  
+
   onLayout(e) {
       const {width, height} = Dimensions.get('window')
       console.log(width, height)
-  };  
-  
+  };
+
   // This is hardcoded. Change it so it can be updated real time
   // Swipe left to get to menu
 	render() {
 		return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
   			<TouchableOpacity style = {styles.container} onPress={() => this.props.navigation.navigate('Menu')}>
-  				  <Image source = {require('./Resources/China-Bridge-Logo.png')} style={styles.image}/>
+  				  <Image source = {require('resources/China-Bridge-Logo.png')} style={styles.image}/>
         </TouchableOpacity>
         <TouchableOpacity style={{flexDirection: 'row'}}>
             <View style={styles.calendardate}>

@@ -46,7 +46,7 @@ export default class SpeakerMD extends Component<{}> {
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
           <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>Michael Durham</Text></View>
-          <Image source = {require('./Resources/MD.jpg')} style = {styles.image}/>
+          <Image source = {require('resources/MD.jpg')} style = {styles.image}/>
           <Text style = {styles.desc}>Michael Durham is pastor of Oak Grove Baptist Church in Paducah, KY. He believed to have been saved because of a prayer he prayed as a child, and even preached for over a decade before God truly converted him.</Text>
           <Text style = {styles.desc}>God called Michael into the ministry after his conversion, and in 1993 he accepted the pastorate at Oak Grove.</Text>
           <Text style = {styles.desc}>In 1995, the church launched a ministry called Living Priorities. In 2008, Living Priorities became Real Truth Matters, a ministry where Michael currently serves as director. He is also the executive director of Romania Missionary Fellowship.</Text>

@@ -45,7 +45,7 @@ export default class SpeakerLP extends Component<{}> {
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
           <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>Larry Pan</Text></View>
-          <Image source = {require('./Resources/LP.jpg')} style = {styles.image}/>
+          <Image source = {require('resources/LP.jpg')} style = {styles.image}/>
           <Text style = {styles.desc}>Larry Pan was born in Taiwan.</Text>
           <Text style = {styles.desc}>He immigrated to Hong Kong with his parents in 1973 and went to study in Canada in 1975. Upon his conversion to Christ in 1977, he went to study in Millar Memorial Bible Institute for three years in preparation for the ministry.</Text>
           <Text style = {styles.desc}>After graduating in 1980, he went to Thailand as a missionary for two years (1982-1984). In 1985 the Lord led him on to Asia where he served as a “tent-maker”.</Text>
