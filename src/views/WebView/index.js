@@ -5,7 +5,7 @@ import { NavigationActions } from 'react-navigation';
 
 var barheight = Dimensions.get('window').height * 0.07;
 
-export default class WebPage extends React.Component {
+export default class WebView extends React.Component {
   static navigationOptions = {
       title: 'Web',
       headerStyle: {

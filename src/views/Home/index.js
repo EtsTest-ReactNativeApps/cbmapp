@@ -20,7 +20,7 @@ import {
 
 var barheight = Dimensions.get('window').height * 0.07;
 
-export default class MainPage extends Component<{}> {
+export default class Home extends Component<{}> {
 	static navigationOptions = {
 	    title: 'Home',
       headerRight: (

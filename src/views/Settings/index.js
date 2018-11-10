@@ -30,7 +30,7 @@ if (settingsData.push_notifications == 0) {
     pushnotifications = 'OFF';
 }
 
-export default class SettingsPage extends Component<{}> {
+export default class Settings extends Component<{}> {
   static navigationOptions = {
       title: 'Settings',
       headerStyle: {
@@ -65,7 +65,7 @@ export default class SettingsPage extends Component<{}> {
           </View>
       </ScrollView>
     );
-  } 
+  }
 }
 
 var wdt = Dimensions.get('window').width * 0.8;

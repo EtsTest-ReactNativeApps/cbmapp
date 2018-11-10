@@ -20,7 +20,7 @@ import * as speakerData from './speakers.json';
 
 var barheight = Dimensions.get('window').height * 0.07;
 
-export default class SpeakerMain extends Component<{}> {
+export default class Speakers extends Component<{}> {
   static navigationOptions = {
       title: 'Speakers',
       headerStyle: {
