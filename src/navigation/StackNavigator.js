@@ -14,25 +14,25 @@ import {
 } from 'react-native'
 import { createStackNavigator } from 'react-navigation'
 
-import SplashScreen from './SplashScreen';
-import Home from './views/Home';
-import SideMenu from './views/SideMenu';
-import WebView from './views/WebView';
-import AboutDescription from './views/AboutDescription';
-import Announcements from './views/Announcements';
-import ContactUs from './views/ContactUs';
-import Settings from './views/Settings';
-import Speakers from './views/Speakers';
-import gen_speaker_page from './views/Speakers/Speaker_individual';
-import SpeakerJH from './views/Speakers/SpeakerJH';
-import SpeakerMD from './views/Speakers/SpeakerMD';
-import SpeakerJT from './views/Speakers/SpeakerJT';
-import SpeakerPW from './views/Speakers/SpeakerPW';
-import SpeakerLP from './views/Speakers/SpeakerLP';
-import Series from './views/Series';
-import Series_1 from './views/Series/Series1';
-import gen_sermon_page from './views/Series/Sermon_individual';
-import manage_downloads from './views/Series/Downloads';
+import SplashScreen from '../SplashScreen';
+import Home from '../views/Home';
+import SideMenu from '../views/SideMenu';
+import WebView from '../views/WebView';
+import AboutDescription from '../views/AboutDescription';
+import Announcements from '../views/Announcements';
+import ContactUs from '../views/ContactUs';
+import Settings from '../views/Settings';
+import Speakers from '../views/Speakers';
+import gen_speaker_page from '../views/Speakers/Speaker_individual';
+import SpeakerJH from '../views/Speakers/SpeakerJH';
+import SpeakerMD from '../views/Speakers/SpeakerMD';
+import SpeakerJT from '../views/Speakers/SpeakerJT';
+import SpeakerPW from '../views/Speakers/SpeakerPW';
+import SpeakerLP from '../views/Speakers/SpeakerLP';
+import Series from '../views/Series';
+import Series_1 from '../views/Series/Series1';
+import gen_sermon_page from '../views/Series/Sermon_individual';
+import manage_downloads from '../views/Series/Downloads';
 
 const StackNavigator = createStackNavigator(
     {

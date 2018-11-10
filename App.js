@@ -12,9 +12,8 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import styled from 'styled-components'
 
-import AppReducer from './reducers/AppReducer'
-import StateNavigator from './navigation/StateNavigator'
-import { bgStatusBar, bgHeader } from './app/styles'
+import AppReducer from './src/reducers/AppReducer'
+import StateNavigator from './src/navigation/StateNavigator'
 
 // Where the app state is stored
 const store = createStore(AppReducer)
