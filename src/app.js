@@ -12,45 +12,46 @@ import {
   createStackNavigator,
 } from 'react-navigation';
 
-import Splash_Screen from 'views/main/Splash_Screen';
-import MainPage from 'views/main/MainPage';
-import MenuPage from 'views/main/MenuPage';
-import WebPage from './views/main/WebView';
-import AboutPage from './views/main/About';
-import AnnouncementPage from './views/announcements/Announcements';
-import ContactUs from './views/main/ContactPage';
-import SettingsPage from './views/settings/Settings';
-import SpeakerMain from './views/speakers/Speaker_main';
-import gen_speaker_page from './views/speakers/Speaker_individual';
-import SpeakerJH from './views/speakers/SpeakerJH';
-import SpeakerMD from './views/speakers/SpeakerMD';
-import SpeakerJT from './views/speakers/SpeakerJT';
-import SpeakerPW from './views/speakers/SpeakerPW';
-import SpeakerLP from './views/speakers/SpeakerLP';
-import SeriesMenu from './views/series/Series_main';
-import Series_1 from './views/series/Series1';
-import gen_sermon_page from './views/series/Sermon_individual';
-import manage_downloads from './views/series/Downloads';
+import Splash_Screen from 'Splash_Screen';
+import Home from './views/Home/';
+import SideMenu from './views/SideMenu/';
+import WebView from './views/WebView/';
+import AboutDescription from './views/AboutDescription/';
+import Announcements from './views/Announcements/';
+import ContactUs from './views/ContactUs/';
+import Settings from './views/Settings/';
+import Speakers from './views/Speakers/';
+import gen_speaker_page from './views/Speakers/Speaker_individual';
+import SpeakerJH from './views/Speakers/SpeakerJH';
+import SpeakerMD from './views/Speakers/SpeakerMD';
+import SpeakerJT from './views/Speakers/SpeakerJT';
+import SpeakerPW from './views/Speakers/SpeakerPW';
+import SpeakerLP from './views/Speakers/SpeakerLP';
+import Series from './views/Series/';
+import Series_1 from './views/Series/Series1';
+import gen_sermon_page from './views/Series/Sermon_individual';
+import manage_downloads from './views/Series/Downloads';
 
 
+// TODO: Is this necessary?
 const App = createStackNavigator(
     {
         InitScreen: { screen: Splash_Screen },
-        Home: { screen: MainPage },
-        Menu: { screen: MenuPage },
-        Web: { screen: WebPage },
-        About: { screen: AboutPage },
-        Announcements: { screen: AnnouncementPage },
+        Home: { screen: Home },
+        Menu: { screen: SideMenu },
+        Web: { screen: WebView },
+        About: { screen: AboutDescription },
+        Announcements: { screen: Announcements },
         Contact: { screen: ContactUs },
-        Settings: { screen: SettingsPage },
-        Speakers: { screen: SpeakerMain },
+        Settings: { screen: Settings },
+        Speakers: { screen: Speakers },
         SpeakerPage: { screen: gen_speaker_page },
         Speaker1: { screen: SpeakerJH },
         Speaker2: { screen: SpeakerMD },
         Speaker3: { screen: SpeakerJT },
         Speaker4: { screen: SpeakerPW },
         Speaker5: { screen: SpeakerLP },
-        SeriesHome: { screen: SeriesMenu },
+        SeriesHome: { screen: Series },
         Series1: { screen: Series_1 },
         Sermon: { screen: gen_sermon_page },
         Downloads: { screen: manage_downloads },

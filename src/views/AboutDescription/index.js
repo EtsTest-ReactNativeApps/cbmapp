@@ -21,7 +21,7 @@ import * as settingsData from '../settings/settings.json';
 var font_size = settingsData.fontsize;
 var barheight = Dimensions.get('window').height * 0.07;
 
-export default class AboutPage extends Component<{}> {
+export default class AboutDescription extends Component<{}> {
   static navigationOptions = {
       title: 'About Us',
       headerStyle: {

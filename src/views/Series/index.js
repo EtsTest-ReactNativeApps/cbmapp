@@ -19,7 +19,7 @@ import * as seriesData from './series.json';
 
 var barheight = Dimensions.get('window').height * 0.07;
 
-export default class SeriesMenu extends Component<{}> {
+export default class Series extends Component<{}> {
   static navigationOptions = {
       title: 'Series',
       headerStyle: {

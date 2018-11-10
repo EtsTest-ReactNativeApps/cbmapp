@@ -13,7 +13,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { 
+import {
   NavigationActions,
 } from 'react-navigation';
 
@@ -21,8 +21,8 @@ import {
 var barheight = Dimensions.get('window').height * 0.07;
 
 
-export default class AnnouncementPage extends Component<{}> {
-  static navigationOptions = {   
+export default class Announcements extends Component<{}> {
+  static navigationOptions = {
       title: 'Announcements',
       headerStyle: {
           backgroundColor: '#F3F3F3',
@@ -33,12 +33,12 @@ export default class AnnouncementPage extends Component<{}> {
           fontWeight: 'bold',
       },
   };
-  
+
   onLayout(e) {
       const {width, height} = Dimensions.get('window')
       console.log(width, height)
   };
-  
+
   // This is hardcoded. Change it so it can be updated real time
   render() {
     return (

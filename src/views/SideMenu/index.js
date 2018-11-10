@@ -17,7 +17,7 @@ import { NavigationActions } from 'react-navigation';
 
 var barheight = Dimensions.get('window').height * 0.07;
 
-export default class MenuPage extends Component<{}> {
+export default class SideMenu extends Component<{}> {
 	static navigationOptions = {
       title: 'Menu',
       headerStyle: {
