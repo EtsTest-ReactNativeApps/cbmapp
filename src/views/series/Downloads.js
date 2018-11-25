@@ -14,14 +14,15 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { 
+import {
   NavigationActions,
 } from 'react-navigation';
 import {CheckBox} from 'react-native-elements';
 
 import * as seriesData from './series.json';
 
-import * as settingsData from './settings.json';
+import deleteIcon from '../../resources/Delete.png'
+import * as settingsData from '../Settings/settings.json';
 var font_size = settingsData.fontsize;
 var barheight = Dimensions.get('window').height * 0.07;
 var wdt = Dimensions.get('window').width * 0.9;
@@ -50,10 +51,10 @@ function delete() {
 
 export default class manage_downloads extends Component<{}> {
   static navigationOptions = {
-      title: 'Manage Downloads', 
+      title: 'Manage Downloads',
       headerRight: (
           <TouchableOpacity onPress={() => remove_downloads()}> // Doesn't work yet
-            <Image source = {require('resources/Delete.png')} style={{width: barheight*0.7, height: barheight*0.7, marginRight: 10}}/>
+            <Image source={deleteIcon} style={{width: barheight*0.7, height: barheight*0.7, marginRight: 10}}/>
           </TouchableOpacity>
       ),
       headerStyle: {
@@ -65,7 +66,7 @@ export default class manage_downloads extends Component<{}> {
           fontWeight: 'bold',
       },
   };
-  
+
   constructor(props) {
       super(props);
       this.state = {checked: false};

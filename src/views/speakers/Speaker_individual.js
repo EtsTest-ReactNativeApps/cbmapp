@@ -13,13 +13,14 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { 
+import {
   NavigationActions,
 } from 'react-navigation';
 
-import speakerid from './Speaker_main.js';  // Doesn't pass anything over
+import speakerid from '.';  // Doesn't pass anything over
 
-import * as settingsData from './settings.json';
+import jhImg from '../../resources/JH.jpg'
+import * as settingsData from '../Settings/settings.json';
 var font_size = settingsData.fontsize;
 import * as speakerData from './speakers.json';
 //alert (speakerid);
@@ -41,7 +42,7 @@ class LogoTitle extends React.Component {
 
 export default class gen_speaker_page extends Component<{}> {
   static navigationOptions = {
-      
+
       title: 'Speakers',
       headerStyle: {
           backgroundColor: '#F3F3F3',
@@ -52,19 +53,19 @@ export default class gen_speaker_page extends Component<{}> {
           fontWeight: 'bold',
       },
   };
-  
+
   onLayout(e) {
       const {width, height} = Dimensions.get('window')
       console.log(width, height)
   };
-  
+
   //{require(img)} doesnt work, use a switch statement for each case
   render() {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
           <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>{speaker.fullname}</Text></View>
-          <Image source = {require("resources/JH.jpg")} style = {styles.image}/> 
+          <Image source={jhImg} style = {styles.image}/>
           <Text style = {styles.desc}>{speaker.bio1}</Text>
           <Text style = {styles.desc}>{speaker.bio2}</Text>
           <Text style = {styles.desc}>{speaker.bio3}</Text>

@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
+import ic_launcher from '../../resources/ic_launcher.png'
 import * as seriesData from './series.json';
 
 var barheight = Dimensions.get('window').height * 0.07;
@@ -41,7 +42,7 @@ export default class Series extends Component<{}> {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Series1')}>
-            <Image source = {require('resources/ic_launcher.png')} style={styles.icon}/>
+            <Image source={ic_launcher} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>{seriesData.series1.title}</Text>
                 <Text style={styles.datetext}>{seriesData.series1.time}</Text>
@@ -50,7 +51,7 @@ export default class Series extends Component<{}> {
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu}>
-            <Image source = {require('resources/ic_launcher.png')} style={styles.icon}/>
+            <Image source={ic_launcher} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>{seriesData.series2.title}</Text>
                 <Text style={styles.datetext}>{seriesData.series2.time}</Text>
@@ -59,7 +60,7 @@ export default class Series extends Component<{}> {
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu}>
-            <Image source = {require('resources/ic_launcher.png')} style={styles.icon}/>
+            <Image source={ic_launcher} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>{seriesData.series3.title}</Text>
                 <Text style={styles.datetext}>{seriesData.series3.time}</Text>
@@ -68,7 +69,7 @@ export default class Series extends Component<{}> {
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu}>
-            <Image source = {require('resources/ic_launcher.png')} style={styles.icon}/>
+            <Image source={ic_launcher} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>{seriesData.series4.title}</Text>
                 <Text style={styles.datetext}>{seriesData.series4.time}</Text>
@@ -77,7 +78,7 @@ export default class Series extends Component<{}> {
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu}>
-            <Image source = {require('resources/ic_launcher.png')} style={styles.icon}/>
+            <Image source={ic_launcher} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>{seriesData.series5.title}</Text>
                 <Text style={styles.datetext}>{seriesData.series5.time}</Text>
@@ -86,7 +87,7 @@ export default class Series extends Component<{}> {
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu}>
-            <Image source = {require('resources/ic_launcher.png')} style={styles.icon}/>
+            <Image source={ic_launcher} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>{seriesData.series6.title}</Text>
                 <Text style={styles.datetext}>{seriesData.series6.time}</Text>
@@ -95,7 +96,7 @@ export default class Series extends Component<{}> {
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu}>
-            <Image source = {require('resources/ic_launcher.png')} style={styles.icon}/>
+            <Image source={ic_launcher} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>{seriesData.series7.title}</Text>
                 <Text style={styles.datetext}>{seriesData.series7.time}</Text>
@@ -104,7 +105,7 @@ export default class Series extends Component<{}> {
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu}>
-            <Image source = {require('resources/ic_launcher.png')} style={styles.icon}/>
+            <Image source={ic_launcher} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>{seriesData.series8.title}</Text>
                 <Text style={styles.datetext}>{seriesData.series8.time}</Text>

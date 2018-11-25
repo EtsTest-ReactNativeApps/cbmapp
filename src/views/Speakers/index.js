@@ -15,6 +15,11 @@ import {
 } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
+import jhImg from '../../resources/JH.jpg'
+import jtImg from '../../resources/JT.jpg'
+import lpImg from '../../resources/LP.jpg'
+import mdImg from '../../resources/MD.jpg'
+import pwImg from '../../resources/PW.jpg'
 import * as speakerData from './speakers.json';
 // var speakerid = { id: '' };
 
@@ -48,38 +53,48 @@ export default class Speakers extends Component<{}> {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker1')}>
-            <Image source = {require('resources/JH.jpg')} style={styles.icon}/>
+            <Image source={jhImg} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Justin Huffman</Text>
                 <Text style={styles.menutext}>Series: In the Beginning</Text>
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker2')}>
-            <Image source = {require('resources/MD.jpg')} style={styles.icon}/>
+            <Image source={mdImg} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Michael Durham</Text>
                 <Text style={styles.menutext}>Series: Desperate Dependence, The Doctrine of Faith, A study of The Bride of Christ, The Church-Household of the living God</Text>
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker3')}>
-            <Image source = {require('resources/JT.jpg')} style={styles.icon}/>
+            <Image source={jtImg} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Jamey Tucker</Text>
                 <Text style={styles.menutext}>Series: </Text>
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker4')}>
-            <Image source = {require('resources/PW.jpg')} style={styles.icon}/>
+            <Image source={pwImg} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Paul David Washer</Text>
-                <Text style={styles.menutext}>Series: The Christian Family, Knowing God, The Perfection of God, The Omniscience of God, The Holiness of God, Our Response to God's Holiness, ...</Text>
+                <Text style={styles.menutext}>
+                    {
+                        `Series: The Christian Family, Knowing God, The Perfection of God, The
+                        Omniscience of God, The Holiness of God, Our Response to God's Holiness, ...`
+                    }
+                </Text>
             </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speaker5')}>
-            <Image source = {require('resources/LP.jpg')} style={styles.icon}/>
+            <Image source={lpImg} style={styles.icon}/>
             <View style={styles.text}>
                 <Text style={styles.menutitle}>Larry Pan</Text>
-                <Text style={styles.menutext}>Series: The Christian Family, Knowing God, The Perfection of God, The Omniscience of God, The Holiness of God, Our Response to God's Holiness, ...</Text>
+                <Text style={styles.menutext}>
+                {
+                    `Series: The Christian Family, Knowing God, The Perfection of God, The
+                    Omniscience of God, The Holiness of God, Our Response to God's Holiness, ...`
+                }
+                </Text>
             </View>
         </TouchableOpacity>
       </ScrollView>

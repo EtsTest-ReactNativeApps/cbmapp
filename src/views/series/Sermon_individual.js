@@ -13,7 +13,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { 
+import {
   NavigationActions,
 } from 'react-navigation';
 import PropTypes from 'prop-types';
@@ -24,7 +24,8 @@ import PropTypes from 'prop-types';
 // import {series_number} from './Series1.js';
 // import {sermon_number} from './Series1.js';
 
-import * as settingsData from './settings.json';
+import chinaBridgeLogo1 from '../../resources/China-Bridge-Logo1.png'
+import * as settingsData from '../Settings/settings.json';
 var font_size = settingsData.fontsize;
 import * as seriesData from './series.json';
 
@@ -52,7 +53,7 @@ TrackPlayer.setupPlayer().then(() => {
 
 track = {
     id: filename,
-    
+
     //url: 'http://example.com/avaritia.mp3', // Load media from the network
     url: filepath, // Load media from the app bundle
 
@@ -61,7 +62,7 @@ track = {
     album: data.series,
     genre: 'Sermon',
     date: data.date, // RFC 3339
-    
+
     //artwork: 'http://example.com/avaritia.png', // Load artwork from the network
     artwork: require('resources/China-Bridge-Logo1.png'), // Load artwork from the app bundle
 };
@@ -78,7 +79,7 @@ TrackPlayer.add([track]).then(function() {
 */
 export default class gen_sermon_page extends Component<{}> {
   static navigationOptions = {
-      title: 'Sermon', 
+      title: 'Sermon',
       headerStyle: {
           backgroundColor: '#F3F3F3',
           height: barheight,
@@ -93,7 +94,7 @@ export default class gen_sermon_page extends Component<{}> {
       sermon_number: PropTypes.number.isRequired,
       series_number: PropTypes.number.isRequired,
   };*/
-  
+
   onLayout(e) {
       const {width, height} = Dimensions.get('window')
       console.log(width, height)
@@ -102,13 +103,13 @@ export default class gen_sermon_page extends Component<{}> {
   play_media() {
       //TrackPlayer.play();
   };
-  
+
   download() { /*
     if (data.downloaded == 0) {
         data.downloaded == 1;
         button_text = "Downloaded \u2713";
     }; */
-    alert("This sermon has been downloaded"); 
+    alert("This sermon has been downloaded");
   };
 
   share() {
@@ -131,7 +132,7 @@ export default class gen_sermon_page extends Component<{}> {
 	const Sermon = b.concat(d);
 	const temp2 = Series.concat(e);
 	const temp3 = temp2.concat(Sermon);
-	const filename = temp3.concat(f);  
+	const filename = temp3.concat(f);
 	const filepath = g.concat(filename);
 
 	const temp = seriesData[Series];
@@ -142,7 +143,7 @@ export default class gen_sermon_page extends Component<{}> {
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
           <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>{data.title}</Text></View>
-          <Image source = {require("resources/China-Bridge-Logo1.png")} style = {styles.image}/>
+          <Image source={chinaBridgeLogo1} style = {styles.image}/>
 
           <View style = {styles.button_cont}>
               <TouchableOpacity style = {styles.button} onPress={() => this.download()}>
@@ -181,8 +182,8 @@ const styles = StyleSheet.create({
       margin: 10,
   },
   button_cont: {
-      flexDirection: 'row', 
-      justifyContent: 'center', 
+      flexDirection: 'row',
+      justifyContent: 'center',
       alignItems: 'center',
       marginBottom: 15,
   },

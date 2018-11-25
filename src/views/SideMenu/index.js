@@ -15,6 +15,16 @@ import {
 } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
+import aboutImg from '../../resources/About.png'
+import calendarImg from '../../resources/Calendar.png'
+import chinaBridgeLogo from '../../resources/China-Bridge-Logo.png'
+import contactUsImg from '../../resources/Contact.png'
+import downloadIcon from '../../resources/Download.png'
+import playIcon from '../../resources/Play.png'
+import settingsImg from '../../resources/Settings.png'
+import speakerImg from '../../resources/Speakers.png'
+import webImg from '../../resources/Web.png'
+
 var barheight = Dimensions.get('window').height * 0.07;
 
 export default class SideMenu extends Component<{}> {
@@ -42,39 +52,39 @@ export default class SideMenu extends Component<{}> {
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
           <View style = {styles.container}>
-            <Image source = {require('resources/China-Bridge-Logo.png')} style={styles.image}/>
+            <Image source={chinaBridgeLogo} style={styles.image}/>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Announcements')}>
-            <Image source = {require('resources/Calendar.png')} style={styles.icon}/>
+            <Image source={calendarImg} style={styles.icon}/>
             <Text style={styles.menutext}>Announcements</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Downloads')}>
-            <Image source = {require('resources/Download.png')} style={styles.icon}/>
+            <Image source={downloadIcon} style={styles.icon}/>
             <Text style={styles.menutext}>Downloads</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('SeriesHome')}>
-            <Image source = {require('resources/Play.png')} style={styles.icon}/>
+            <Image source={playIcon} style={styles.icon}/>
             <Text style={styles.menutext}>Series</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Speakers')}>
-            <Image source = {require('resources/Speakers.png')} style={styles.icon}/>
+            <Image source={speakerImg} style={styles.icon}/>
             <Text style={styles.menutext}>Speakers</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Web')}>
-            <Image source = {require('resources/Web.png')} style={styles.icon}/>
+            <Image source={webImg} style={styles.icon}/>
             <Text style={styles.menutext}>Web Page</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('About')}>
-            <Image source = {require('resources/About.png')} style={styles.icon}/>
+            <Image source={aboutImg} style={styles.icon}/>
             <Text style={styles.menutext}>About Us</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Contact')}>
-            <Image source = {require('resources/Contact.png')} style={styles.icon}/>
+            <Image source={contactUsImg} style={styles.icon}/>
             <Text style={styles.menutext}>Contact Us</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menu} onPress={() => this.props.navigation.navigate('Settings')}>
-            <Image source = {require('resources/Settings.png')} style={styles.icon}/>
+            <Image source={settingsImg} style={styles.icon}/>
             <Text style={styles.menutext}>Settings</Text>
         </TouchableOpacity>
       </ScrollView>

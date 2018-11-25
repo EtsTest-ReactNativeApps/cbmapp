@@ -1,8 +1,9 @@
 {
-  "name": "ChinaBridgeApp1",
+  "name": "ChinaBridgeApp",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-root-slash-import": "^1.1.0",
     "eslint": "^5.9.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",
@@ -26,7 +27,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "^27.0.1",
+    "expo": "^31.0.5",
     "prop-types": "^15.6.2",
     "react": "^16.3.1",
     "react-native": "^0.55.4",
@@ -41,10 +42,11 @@
     "react-native-track-player": "^0.2.5",
     "react-native-vector-icons": "^5.0.0",
     "react-native-wheel-scroll-picker": "^0.1.9",
-    "react-navigation": "^2.12.1",
+    "react-navigation": "^3.0.0",
     "react-redux": "^5.1.0",
     "redux": "^4.0.0",
     "styled-components": "^4.0.3",
-    "tcomb-form-native": "^0.6.16"
+    "tcomb-form-native": "^0.6.16",
+    "yarn-deduplicate": "^1.0.3"
   }
 }

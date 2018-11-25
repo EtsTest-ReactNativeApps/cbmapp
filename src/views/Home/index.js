@@ -17,6 +17,8 @@ import {
   NavigationActions,
 } from 'react-navigation';
 
+import chinaBridgeLogo from '../../resources/China-Bridge-Logo.png'
+import menuImg from '../../resources/menu.png'
 
 var barheight = Dimensions.get('window').height * 0.07;
 
@@ -25,7 +27,7 @@ export default class Home extends Component<{}> {
 	    title: 'Home',
       headerRight: (
           <TouchableOpacity> // Doesn't work yet
-            <Image source = {require('resources/menu.png')} style={{width: barheight*0.7, height: barheight*0.7, marginRight: 10}}/>
+            <Image source={menuImg} style={{width: barheight*0.7, height: barheight*0.7, marginRight: 10}} />
           </TouchableOpacity>
       ),
 	    headerStyle: {
@@ -49,7 +51,7 @@ export default class Home extends Component<{}> {
 		return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
   			<TouchableOpacity style = {styles.container} onPress={() => this.props.navigation.navigate('Menu')}>
-  				  <Image source = {require('resources/China-Bridge-Logo.png')} style={styles.image}/>
+  				  <Image source={chinaBridgeLogo} style={styles.image}/>
         </TouchableOpacity>
         <TouchableOpacity style={{flexDirection: 'row'}}>
             <View style={styles.calendardate}>
@@ -57,7 +59,9 @@ export default class Home extends Component<{}> {
                 <Text style={styles.calendardatetext1}>22-23</Text>
             </View>
             <View style={styles.calendarevent}>
-                <Text style={{fontSize:16, color:'#245D8C', fontWeight: 'bold'}}>God's Purpose for Creating Man</Text>
+                <Text style={{fontSize:16, color:'#245D8C', fontWeight: 'bold'}}>
+                    {`God's Purpose for Creating Man`}
+                </Text>
                 <Text style={{fontSize:13, marginTop:3}}>Speaker: Paul Washer</Text>
                 <Text style={{fontSize:13}}>Translator: Larry Pan</Text>
             </View>

@@ -13,16 +13,17 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { 
+import {
   NavigationActions,
 } from 'react-navigation';
 
-import * as settingsData from './settings.json';
+import jhImg from '../../resources/JH.jpg'
+import * as settingsData from '../Settings/settings.json';
 var font_size = settingsData.fontsize;
 var barheight = Dimensions.get('window').height * 0.07;
 
 export default class SpeakerJH extends Component<{}> {
-  static navigationOptions = {      
+  static navigationOptions = {
       title: 'Speakers',
       headerStyle: {
           backgroundColor: '#F3F3F3',
@@ -33,19 +34,19 @@ export default class SpeakerJH extends Component<{}> {
           fontWeight: 'bold',
       },
   };
-  
+
   onLayout(e) {
       const {width, height} = Dimensions.get('window')
       console.log(width, height)
   };
-  
+
   // This is hardcoded. Change it so it can be updated real time
   render() {
     return (
       <ScrollView onLayout={this.onLayout.bind(this)}>
         <View style = {styles.container}>
           <View style = {{alignItems: 'center'}}><Text style = {styles.title1}>Justin Huffman</Text></View>
-          <Image source = {require('resources/JH.jpg')} style = {styles.image}/>
+          <Image source={jhImg} style = {styles.image}/>
           <Text style = {styles.desc}>Justin is a graduate of Reformed Theological Seminary, has pastored in the U.S. for over 15 years, and has traveled to every continent except Antarctica—because, as his youngest son has observed, penguins don’t need the gospel.</Text>
           <Text style = {styles.desc}>He and his wife Chau have four children: Edmond (from Russia), Ransom and Avery (from Vietnam), and Eva (from Arkansas).</Text>
           <Text style = {styles.desc}>Justin has contributed articles to For the Church, Servants of Grace, and Reformed Perspectives Magazine.</Text>

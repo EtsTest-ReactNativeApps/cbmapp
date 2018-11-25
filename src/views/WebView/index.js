@@ -1,9 +1,17 @@
-import React from 'react';
-import { StyleSheet, Text, View, Dimensions, TouchableOpacity, Button, WebView } from 'react-native';
-import { NavigationActions } from 'react-navigation';
+import React from 'react'
+import {
+    Button,
+    Dimensions,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
+    WebView as ReactWebView
+} from 'react-native'
+import { NavigationActions } from 'react-navigation'
 
 
-var barheight = Dimensions.get('window').height * 0.07;
+var barheight = Dimensions.get('window').height * 0.07
 
 export default class WebView extends React.Component {
   static navigationOptions = {
@@ -16,21 +24,21 @@ export default class WebView extends React.Component {
       headerTitleStyle: {
           fontWeight: 'bold',
       },
-  };
+  }
 
   render() {
       return (
-          <WebView
+          <ReactWebView
             source={{uri: 'https://www.gospelchinabridge.org/en/'}}
             style={{marginTop: 0}}
           />
-      );
-  };
+      )
+  }
 
 }
 
-var Width = Dimensions.get('window').width * 0.25;
-var Height = Dimensions.get('window').width * 0.10;
+var Width = Dimensions.get('window').width * 0.25
+var Height = Dimensions.get('window').width * 0.10
 
 const styles = StyleSheet.create({
   button: {
@@ -47,4 +55,4 @@ const styles = StyleSheet.create({
     color: '#000000',
     fontWeight: 'bold',
   }
-});
+})
